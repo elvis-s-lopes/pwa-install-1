@@ -20,6 +20,17 @@ export default class Utils {
 			return true;
 		return false;
     }
+
+    static isAppleNotificable(): boolean {
+		if (
+                (
+                    ['iPhone', 'iPad', 'iPod'].includes(navigator.platform) ||
+                    (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)
+                )
+            )
+			return true;
+		return false;
+    }
     
     static isStandalone() {
 		if (window.matchMedia('(display-mode: standalone)').matches || ('standalone' in navigator && (navigator as any).standalone === true))
@@ -52,5 +63,10 @@ export default class Utils {
     static eventInstallAvailable(_element: Element) {
         _eventDispatcher(_element, 'pwa-install-available-event', 'Application installation available');
     }
+
+    static eventPermissionsNotification(_element: Element) {
+        _eventDispatcher(_element, 'pwa-permissions-notification-event', 'Pemission available');
+    }
+    
     
 }

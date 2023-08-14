@@ -19,5 +19,7 @@
 'scdaf4bbff76674c8': `Προσθήκη στην Οθόνη Αφετηρίας`,
 'sdca23702207fba73': `Αυτός ο ιστότοπος έχει λειτουργικότητα εφαρμογής. Εγκαταστήστε την στη συσκευή σας για εκτεταμένη εμπειρία και εύκολη πρόσβαση.`,
 'sdfe23506a3b0cdc8': `1) Ανοίξτε τον περιηγητή Safari`,
+'se284453d6703f389': `Para uma melhor experiência, recomendamos que você ative as notificações no botão abaixo.`,
+'s040cfbc6dcd8ac22': `Permitir notificações`,
     };
   

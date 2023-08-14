@@ -264,6 +264,260 @@
           },
           "tagName": "pwa-install",
           "customElement": true
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PWAPermissionsElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "manifest",
+              "type": {
+                "text": "WebAppManifest"
+              },
+              "privacy": "private",
+              "default": "new Manifest()"
+            },
+            {
+              "kind": "field",
+              "name": "manifestUrl",
+              "type": {
+                "text": "string"
+              },
+              "default": "'/manifest.json'",
+              "attribute": "manifest-url"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "description"
+            },
+            {
+              "kind": "field",
+              "name": "installDescription",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "install-description"
+            },
+            {
+              "kind": "field",
+              "name": "disableDescription",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disable-install-description"
+            },
+            {
+              "kind": "field",
+              "name": "manualApple",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "manual-apple"
+            },
+            {
+              "kind": "field",
+              "name": "manualChrome",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "manual-chrome"
+            },
+            {
+              "kind": "field",
+              "name": "disableChrome",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disable-chrome"
+            },
+            {
+              "kind": "field",
+              "name": "platforms",
+              "type": {
+                "text": "BeforeInstallPromptEvent['platforms']"
+              },
+              "privacy": "public",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "userChoiceResult",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "isDialogHidden",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "isInstallAvailable",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "isAppleMobilePlatform",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "isUnderStandaloneMode",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "isRelatedAppsInstalled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "hideDialog",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "showDialog",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "requestNotification",
+              "privacy": "public"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "manifest-url",
+              "type": {
+                "text": "string"
+              },
+              "default": "'/manifest.json'",
+              "fieldName": "manifestUrl"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "icon"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "name"
+            },
+            {
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "description"
+            },
+            {
+              "name": "install-description",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "installDescription"
+            },
+            {
+              "name": "disable-install-description",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disableDescription"
+            },
+            {
+              "name": "manual-apple",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "manualApple"
+            },
+            {
+              "name": "manual-chrome",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "manualChrome"
+            },
+            {
+              "name": "disable-chrome",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disableChrome"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "pwa-permissions",
+          "customElement": true
         }
       ],
       "exports": [
@@ -285,9 +539,33 @@
         },
         {
           "kind": "js",
+          "name": "PWAPermissionsElement",
+          "declaration": {
+            "name": "PWAPermissionsElement",
+            "module": "src/index.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pwa-permissions",
+          "declaration": {
+            "name": "PWAPermissionsElement",
+            "module": "src/index.ts"
+          }
+        },
+        {
+          "kind": "js",
           "name": "PWAInstallAttributes",
           "declaration": {
             "name": "PWAInstallAttributes",
+            "module": "src/index.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "PWAPermissionsAttributes",
+          "declaration": {
+            "name": "PWAPermissionsAttributes",
             "module": "src/index.ts"
           }
         }

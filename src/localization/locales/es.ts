@@ -19,5 +19,7 @@
 'scdaf4bbff76674c8': `Añadir a pantalla de inicio`,
 'sdca23702207fba73': `Este sitio tiene una funcionalidad de aplicación. Es posible instalarla en este dispositivo para una amplia experiencia y acceso fácil.`,
 'sdfe23506a3b0cdc8': `1) Abrir en el navegador web Safari`,
+'se284453d6703f389': `Para uma melhor experiência, recomendamos que você ative as notificações no botão abaixo.`,
+'s040cfbc6dcd8ac22': `Permitir notificações`,
     };
   

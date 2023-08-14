@@ -25,12 +25,12 @@ const template = (name: string, description: string, installDescription: string,
                     </div>
                     ${description ? html `<div class="description app-description">${description}</div>`: ''}
                     ${!disableDescription? 
-                        html`<hr><div class="description install-description">${installDescription? installDescription: msg('This site has app functionality. Install it on your device for extensive experience and easy access.')}</div>` 
+                        html`<hr><div class="description install-description">${installDescription? installDescription: msg('Para uma melhor experiência, recomendamos que você ative as notificações no botão abaixo.')}</div>` 
                         : ''}
                     ${manifest.screenshots && manifest.screenshots.length? html`<pwa-gallery .screenshots=${manifest.screenshots}></pwa-gallery>`: ''}
                     <div class="action-buttons">
                         ${manifest.screenshots && manifest.screenshots.length? html`<button class="material-button secondary" @click='${toggleGallery}'>${galleryRequested?msg('Less'):msg('More')}</button>`:''}
-                        <button class="material-button primary install" @click='${install}'>${msg('Install')}</button>
+                        <button class="material-button primary install" @click='${install}'>${msg('Permitir notificações')}</button>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,6 @@ const template = (name: string, description: string, installDescription: string,
                 <div class="dialog-body">
                     <pwa-bottom-sheet .props=${{name, icon, description}} .install=${install} .hideDialog=${hideDialog}>
                     </pwa-bottom-sheet>
-                    ${manifest.screenshots && manifest.screenshots.length? html`<pwa-gallery .screenshots=${manifest.screenshots}></pwa-gallery>`: ''}
                 </div>
             </div>
         </div>`;

@@ -24,6 +24,18 @@ export interface PWAInstallAttributes {
     icon?: string;
 }
 
+export interface PWAPermissionsAttributes {
+    ['manual-apple']?: Booleanish;
+    ['manual-chrome']?: Booleanish;
+    ['disable-chrome']?: Booleanish;
+    ['install-description']?: string;
+    ['disable-install-description']?: Booleanish;
+    ['manifest-url']?: string;
+    name?: string;
+    description?: string;
+    icon?: string;
+}
+
 export class Manifest {
     constructor() {
         this.icons = [{ src: '' }];

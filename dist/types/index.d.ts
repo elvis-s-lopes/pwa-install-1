@@ -1,6 +1,6 @@
 /// <reference types="dom-chromium-installation-events" />
 import { LitElement } from 'lit';
-import { IRelatedApp, PWAInstallAttributes } from './types/types';
+import { IRelatedApp, PWAInstallAttributes, PWAPermissionsAttributes } from './types/types';
 export declare class PWAInstallElement extends LitElement {
     private manifest;
     manifestUrl: string;
@@ -36,4 +36,36 @@ export declare class PWAInstallElement extends LitElement {
     connectedCallback(): void;
     render(): import("lit-html").TemplateResult<1>;
 }
-export { PWAInstallAttributes };
+export declare class PWAPermissionsElement extends LitElement {
+    private manifest;
+    manifestUrl: string;
+    icon: string;
+    name: string;
+    description: string;
+    installDescription: string;
+    disableDescription: boolean;
+    manualApple: boolean;
+    manualChrome: boolean;
+    disableChrome: boolean;
+    static get styles(): CSSStyleSheet[];
+    platforms: BeforeInstallPromptEvent['platforms'];
+    userChoiceResult: string;
+    isDialogHidden: boolean;
+    isInstallAvailable: boolean;
+    isAppleMobilePlatform: boolean;
+    isUnderStandaloneMode: boolean;
+    isRelatedAppsInstalled: boolean;
+    private _howToRequested;
+    install: () => void;
+    private _hideDialog;
+    private _hideDialogUser;
+    hideDialog: () => void;
+    showDialog: (forced?: boolean) => void;
+    requestNotification: (forced?: boolean) => void;
+    private _howToForApple;
+    private _checkPermissions;
+    private _init;
+    connectedCallback(): void;
+    render(): import("lit-html").TemplateResult<1> | null;
+}
+export { PWAInstallAttributes, PWAPermissionsAttributes };

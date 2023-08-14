@@ -42,6 +42,12 @@
   <source>Add to Home Screen</source>
   <target>Toevoegen aan het startscherm</target>
 </trans-unit>
+<trans-unit id="se284453d6703f389">
+  <source>Para uma melhor experiência, recomendamos que você ative as notificações no botão abaixo.</source>
+</trans-unit>
+<trans-unit id="s040cfbc6dcd8ac22">
+  <source>Permitir notificações</source>
+</trans-unit>
 </body>
 </file>
 </xliff>

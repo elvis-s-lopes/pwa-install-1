@@ -10,6 +10,8 @@ import * as de from "./locales/de"
 import * as es from "./locales/es"
 import * as nl from "./locales/nl"
 import * as el from "./locales/el"
+import * as pt from "./locales/pt"
+
 
 const localizedTemplates = new Map([
   ['ru', ru],
@@ -17,7 +19,8 @@ const localizedTemplates = new Map([
   ['de', de],
   ['es', es],
   ['nl', nl],
-  ['el', el]
+  ['el', el],
+  ['pt', pt]
 ])
 
 export const { getLocale, setLocale } = configureLocalization({

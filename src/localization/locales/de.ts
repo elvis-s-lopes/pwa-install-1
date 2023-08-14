@@ -19,5 +19,7 @@
 'scdaf4bbff76674c8': `Hinzufügen zum Startbildschirm`,
 'sdca23702207fba73': `Diese Website verfügt über eine App-Funktionalität. Sie können die App auf Ihrem Gerät installieren, um eine bessere Erfahrung und einen einfachen Zugang zu genießen.`,
 'sdfe23506a3b0cdc8': `1) In Safari-Browser öffnen`,
+'se284453d6703f389': `Para uma melhor experiência, recomendamos que você ative as notificações no botão abaixo.`,
+'s040cfbc6dcd8ac22': `Permitir notificações`,
     };
   

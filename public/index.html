@@ -57,10 +57,21 @@
 		</fieldset>
 	</section>
 
+
+
+
 	<pwa-install id="pwa-install" manifest-url="manifest.json"></pwa-install>
+	<pwa-permissions id="pwa-permissions" disable-chrome="true" manifest-url="manifest.json"></pwa-permissions>
 
 	<script type="text/javascript">
 		var pwaInstall = document.getElementById("pwa-install");
+		var pwaPermissions = document.getElementById("pwa-permissions");
+
+		pwaPermissions.addEventListener('pwa-permissions-notification-event', (event) => {
+			console.log(event.detail.message);
+		});
+
+
 
 		document.getElementById('events-area').value = "";
 		const logMessage = (message) => {
@@ -81,12 +92,12 @@
 			pwaInstall.hideDialog();
 			pwaInstall.showDialog();
 		}
-
-		pwaInstall.addEventListener('pwa-install-success-event', (event) => {logMessage(event.detail.message)});
-		pwaInstall.addEventListener('pwa-install-fail-event', (event) => {logMessage(event.detail.message)});
-		pwaInstall.addEventListener('pwa-user-choice-result-event', (event) => {logMessage(event.detail.message)});
-		pwaInstall.addEventListener('pwa-install-available-event', (event) => {logMessage(event.detail.message)});
+	
 	</script>
+
+ 
+   
+</body>
 </body>
 
 </html>
